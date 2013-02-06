@@ -112,12 +112,7 @@ class Kohana_Ulogin {
 		{
 			if (($orm_user = Auth::instance()->get_user()))
 			{
-				$user['user_id'] = $orm_user->id;
-				$ulogin->values($user, array(
-					'user_id',
-					'identity',
-					'network',
-				))->create();
+                $this->create_ulogin($ulogin, $user);
 			}
 			else
 			{
@@ -145,11 +140,7 @@ class Kohana_Ulogin {
 				
 				$user['user_id'] = $orm_user->id;
 				
-				$ulogin->values($user, array(
-					'user_id',
-					'identity',
-					'network',
-				))->create();
+                $this->create_ulogin($ulogin, $user);
 				
 				Auth::instance()->force_login($orm_user);
 			}
@@ -164,4 +155,21 @@ class Kohana_Ulogin {
 	{
 		return !empty($_POST['token']);
 	}
+    
+    protected function create_ulogin($ulogin, $post)
+    {
+        return $ulogin->values($post, array(
+            'user_id',
+            'identity',
+            'network',
+        ))->create();
+    }
+
+    protected function create_new_user($data)
+    {
+        $orm_user = ORM::factory('User')->values($data)->create();
+        $orm_user->add('roles', ORM::factory('Role', array('name' => 'login')));
+        return $orm_user;
+    }
+    
 }
