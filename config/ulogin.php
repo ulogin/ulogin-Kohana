@@ -2,13 +2,13 @@
 
 return array
 (
-	// Âîçìîæíûå çíà÷åíèÿ: small, panel, window
+	// Ğ’Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ñ‹Ğµ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ñ: small, panel, window
 	'type' 			=> 'panel',
 	
-	// íà êàêîé àäğåñ ïğèä¸ò POST-çàïğîñ îò uLogin
+	// Ğ½Ğ° ĞºĞ°ĞºĞ¾Ğ¹ Ğ°Ğ´Ñ€ĞµÑ Ğ¿Ñ€Ğ¸Ğ´Ñ‘Ñ‚ POST-Ğ·Ğ°Ğ¿Ñ€Ğ¾Ñ Ğ¾Ñ‚ uLogin
 	'redirect_uri' 	=>	NULL,
 	
-	// Ñåğâèñû, âûâîäèìûå ñğàçó
+	// Ğ¡ĞµÑ€Ğ²Ğ¸ÑÑ‹, Ğ²Ñ‹Ğ²Ğ¾Ğ´Ğ¸Ğ¼Ñ‹Ğµ ÑÑ€Ğ°Ğ·Ñƒ
 	'providers'		=> array(
 		'vkontakte',
 		'facebook',
@@ -16,7 +16,7 @@ return array
 		'google',
 	),
 	
-	// Âûâîäèìûå ïğè íàâåäåíèè
+	// Ğ’Ñ‹Ğ²Ğ¾Ğ´Ğ¸Ğ¼Ñ‹Ğµ Ğ¿Ñ€Ğ¸ Ğ½Ğ°Ğ²ĞµĞ´ĞµĞ½Ğ¸Ğ¸
 	'hidden' 		=> array(
 		'odnoklassniki',
 		'mailru',
@@ -24,17 +24,17 @@ return array
 		'openid'
 	),
 	
-	// İòè ïîëÿ èñïîëüçóşòñÿ äëÿ ïîëÿ username â òàáëèöå users
+	// Ğ­Ñ‚Ğ¸ Ğ¿Ğ¾Ğ»Ñ Ğ¸ÑĞ¿Ğ¾Ğ»ÑŒĞ·ÑƒÑÑ‚ÑÑ Ğ´Ğ»Ñ Ğ¿Ğ¾Ğ»Ñ username Ğ² Ñ‚Ğ°Ğ±Ğ»Ğ¸Ñ†Ğµ users
 	'username' 		=> array (
 		'first_name',
 		'last_name',
 	),
 	
-	// Îáÿçàòåëüíûå ïîëÿ
+	// ĞĞ±ÑĞ·Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ğµ Ğ¿Ğ¾Ğ»Ñ
 	'fields' 		=> array(
 		'email',
 	),
 	
-	// Íåîáÿçàòåëüíûå ïîëÿ
+	// ĞĞµĞ¾Ğ±ÑĞ·Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ğµ Ğ¿Ğ¾Ğ»Ñ
 	'optional'		=> array(),
 );
